@@ -15,6 +15,8 @@
 		6AF300A12C0E112500AC26F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AF300A02C0E112500AC26F8 /* Assets.xcassets */; };
 		6AF300A42C0E112500AC26F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AF300A22C0E112500AC26F8 /* LaunchScreen.storyboard */; };
 		6AF300AF2C0E112600AC26F8 /* PlayBooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF300AE2C0E112600AC26F8 /* PlayBooksTests.swift */; };
+		6AF300CB2C0F42E500AC26F8 /* ReactorKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6AF300CA2C0F42E500AC26F8 /* ReactorKit */; };
+		6AF300CE2C0F42F500AC26F8 /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = 6AF300CD2C0F42F500AC26F8 /* Cosmos */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AF300CE2C0F42F500AC26F8 /* Cosmos in Frameworks */,
+				6AF300CB2C0F42E500AC26F8 /* ReactorKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +136,10 @@
 			dependencies = (
 			);
 			name = PlayBooks;
+			packageProductDependencies = (
+				6AF300CA2C0F42E500AC26F8 /* ReactorKit */,
+				6AF300CD2C0F42F500AC26F8 /* Cosmos */,
+			);
 			productName = PlayBooks;
 			productReference = 6AF300912C0E112300AC26F8 /* PlayBooks.app */;
 			productType = "com.apple.product-type.application";
@@ -204,6 +212,12 @@
 				Base,
 			);
 			mainGroup = 6AF300882C0E112300AC26F8;
+			packageReferences = (
+				6AF300C72C0F40ED00AC26F8 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				6AF300C82C0F429A00AC26F8 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				6AF300C92C0F42E500AC26F8 /* XCRemoteSwiftPackageReference "ReactorKit" */,
+				6AF300CC2C0F42F500AC26F8 /* XCRemoteSwiftPackageReference "Cosmos" */,
+			);
 			productRefGroup = 6AF300922C0E112300AC26F8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -590,6 +604,54 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6AF300C72C0F40ED00AC26F8 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+		6AF300C82C0F429A00AC26F8 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		6AF300C92C0F42E500AC26F8 /* XCRemoteSwiftPackageReference "ReactorKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactorKit/ReactorKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		6AF300CC2C0F42F500AC26F8 /* XCRemoteSwiftPackageReference "Cosmos" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/Cosmos.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 25.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6AF300CA2C0F42E500AC26F8 /* ReactorKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6AF300C92C0F42E500AC26F8 /* XCRemoteSwiftPackageReference "ReactorKit" */;
+			productName = ReactorKit;
+		};
+		6AF300CD2C0F42F500AC26F8 /* Cosmos */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6AF300CC2C0F42F500AC26F8 /* XCRemoteSwiftPackageReference "Cosmos" */;
+			productName = Cosmos;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		6AF3009D2C0E112300AC26F8 /* PlayBooks.xcdatamodeld */ = {
