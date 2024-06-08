@@ -22,6 +22,7 @@
 		6AF300AF2C0E112600AC26F8 /* PlayBooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF300AE2C0E112600AC26F8 /* PlayBooksTests.swift */; };
 		6AF300CB2C0F42E500AC26F8 /* ReactorKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6AF300CA2C0F42E500AC26F8 /* ReactorKit */; };
 		6AF300CE2C0F42F500AC26F8 /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = 6AF300CD2C0F42F500AC26F8 /* Cosmos */; };
+		6AF300D02C102BF400AC26F8 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF300CF2C102BF400AC26F8 /* Endpoint.swift */; };
 		6AF300DD2C10360E00AC26F8 /* BookList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF300DC2C10360E00AC26F8 /* BookList.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		6AF300A52C0E112500AC26F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6AF300AA2C0E112600AC26F8 /* PlayBooksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlayBooksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AF300AE2C0E112600AC26F8 /* PlayBooksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayBooksTests.swift; sourceTree = "<group>"; };
+		6AF300CF2C102BF400AC26F8 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		6AF300DC2C10360E00AC26F8 /* BookList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,6 +128,7 @@
 		6AF300D12C102C1F00AC26F8 /* Networks */ = {
 			isa = PBXGroup;
 			children = (
+				6AF300CF2C102BF400AC26F8 /* Endpoint.swift */,
 			);
 			path = Networks;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 			files = (
 				6AF300DD2C10360E00AC26F8 /* BookList.swift in Sources */,
 				6AF300952C0E112300AC26F8 /* AppDelegate.swift in Sources */,
+				6AF300D02C102BF400AC26F8 /* Endpoint.swift in Sources */,
 				6AF3009F2C0E112300AC26F8 /* PlayBooks.xcdatamodeld in Sources */,
 				6AF300972C0E112300AC26F8 /* SceneDelegate.swift in Sources */,
 			);
