@@ -26,6 +26,7 @@
 		6AF300CE2C0F42F500AC26F8 /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = 6AF300CD2C0F42F500AC26F8 /* Cosmos */; };
 		6AF300D02C102BF400AC26F8 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF300CF2C102BF400AC26F8 /* Endpoint.swift */; };
 		6AF300D52C102FCC00AC26F8 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF300D42C102FCC00AC26F8 /* NetworkError.swift */; };
+		6AF300D92C10303D00AC26F8 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF300D82C10303D00AC26F8 /* NetworkManager.swift */; };
 		6AF300DD2C10360E00AC26F8 /* BookList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF300DC2C10360E00AC26F8 /* BookList.swift */; };
 		6AF300E22C1190E000AC26F8 /* URLSession+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF300E12C1190E000AC26F8 /* URLSession+Extension.swift */; };
 /* End PBXBuildFile section */
@@ -55,6 +56,7 @@
 		6AF300AE2C0E112600AC26F8 /* PlayBooksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayBooksTests.swift; sourceTree = "<group>"; };
 		6AF300CF2C102BF400AC26F8 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		6AF300D42C102FCC00AC26F8 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		6AF300D82C10303D00AC26F8 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		6AF300DC2C10360E00AC26F8 /* BookList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookList.swift; sourceTree = "<group>"; };
 		6AF300E12C1190E000AC26F8 /* URLSession+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -140,6 +142,7 @@
 				6AF300DB2C1035EE00AC26F8 /* Models */,
 				6AF300CF2C102BF400AC26F8 /* Endpoint.swift */,
 				6AF300D42C102FCC00AC26F8 /* NetworkError.swift */,
+				6AF300D82C10303D00AC26F8 /* NetworkManager.swift */,
 				6ACD58612C142E7B0091EB29 /* URLSessionable.swift */,
 				6ACD58692C145E290091EB29 /* NetworkRequestable.swift */,
 			);
@@ -283,6 +286,7 @@
 				6AF300D52C102FCC00AC26F8 /* NetworkError.swift in Sources */,
 				6AF300DD2C10360E00AC26F8 /* BookList.swift in Sources */,
 				6AF300952C0E112300AC26F8 /* AppDelegate.swift in Sources */,
+				6AF300D92C10303D00AC26F8 /* NetworkManager.swift in Sources */,
 				6ACD58622C142E7B0091EB29 /* URLSessionable.swift in Sources */,
 				6AF300E22C1190E000AC26F8 /* URLSession+Extension.swift in Sources */,
 				6AF300D02C102BF400AC26F8 /* Endpoint.swift in Sources */,
