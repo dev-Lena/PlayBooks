@@ -35,3 +35,10 @@ enum NetworkError: Error {
     }
 }
 
+// XCTest 메서드 사용 위한 Equatable 채택
+extension NetworkError: Equatable {
+    static func == (lhs: NetworkError, rhs: NetworkError) -> Bool {
+        guard type(of: lhs) == type(of: rhs) else { return false }
+        return lhs.localizedDescription == rhs.localizedDescription
+    }
+}
