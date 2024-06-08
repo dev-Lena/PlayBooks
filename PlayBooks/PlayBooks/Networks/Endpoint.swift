@@ -14,6 +14,7 @@ enum BookType: String {
 
 enum Endpoint {
     case searchBooks(query: String, startIndex: Int, maxResults: Int, bookType: BookType)
+    case fetchBook(id: String)
     
     var url: URL? {
         var components = URLComponents()
@@ -36,6 +37,8 @@ enum Endpoint {
                 components.queryItems?
                     .append(URLQueryItem(name: "filter", value: "ebooks"))
             }
+        case .fetchBook(let id):
+            components.path += "/\(id)"
         }
         return components.url
     }
