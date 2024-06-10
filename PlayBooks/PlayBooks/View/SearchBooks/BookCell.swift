@@ -85,8 +85,17 @@ final class BookCell: UITableViewCell {
         setAuthorLabel(book.volumeInfo.authors)
         bookTypeLabel.text = bookType.description
         let imageURL = book.volumeInfo.imageLinks?.smallThumbnail ?? ""
+        await configureImage(imageURL)
     }
     
+    private func configureImage(_ imageURL: String) async {
+        do {
+            let image = try await UIImage().downloadImage(from: imageURL)
+            bookImageView.image = image
+        } catch {
+            bookImageView.image = .defaultImage
+        }
+    }
     
     private func setAuthorLabel(_ authors: [String]?) {
         guard let authors = authors else {
