@@ -9,20 +9,30 @@ import Foundation
 
 // MARK: - Book
 struct Book: Codable {
-    let kind, id, etag: String
-    let selfLink: String
-    let volumeInfo: VolumeInfo
+    let id: String
+    let volumeInfo: BookInformation?
 }
 
 // MARK: - VolumeInfo
-struct VolumeInfo: Codable {
-    let title: String
-    let authors: [String]
-    let publisher, publishedDate: String
-    let pageCount: Int
-    let printType, maturityRating: String
-    let contentVersion: String
-    let language: String
-    let previewLink: String
-    let infoLink: String
+struct BookInformation: Codable {
+    let title: String?
+    let authors: [String]?
+    let publisher, publishedDate, description: String?
+    let imageUrls: ImageUrls?
+    let pageCount: Int?
+    let printType: String?
+    let averageRating, ratingsCount: Int?
+    let infoLink: String?
+}
+
+// MARK: - ImageLinks
+struct ImageUrls: Codable {
+    let smallThumbnail: String
+    let thumbnail: String
+}
+
+extension Book: Equatable {
+    static func == (lhs: Book, rhs: Book) -> Bool {
+        return (lhs.id == rhs.id)
+    }
 }
