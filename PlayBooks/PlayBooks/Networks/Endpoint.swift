@@ -8,8 +8,8 @@
 import Foundation
 
 enum BookType: String {
-    case allBooks
-    case eBooks = "ebooks"
+    case allBooks = "Book"
+    case eBooks = "eBook"
 }
 
 enum Endpoint {
