@@ -75,6 +75,7 @@ class SearchBooksViewController: UIViewController, View {
         }
     }
     
+    func bind(reactor: SearchBooksViewReactor) {
 }
 
 extension SearchBooksViewController: UITableViewDelegate {
