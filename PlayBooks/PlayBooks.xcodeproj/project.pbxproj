@@ -63,6 +63,7 @@
 		6AB44BC92C1712C3006E5D02 /* BookType+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BookType+Extension.swift"; sourceTree = "<group>"; };
 		6AB44BCB2C172B98006E5D02 /* SearchBooksViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBooksViewReactor.swift; sourceTree = "<group>"; };
 		6AB44BD02C173C22006E5D02 /* BookSummaryInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSummaryInfoView.swift; sourceTree = "<group>"; };
+		6AB44BD22C173F8C006E5D02 /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
 		6ACB7CF22C11B07900E90E66 /* SearchBookRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBookRepository.swift; sourceTree = "<group>"; };
 		6ACD58612C142E7B0091EB29 /* URLSessionable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionable.swift; sourceTree = "<group>"; };
 		6ACD58672C143E420091EB29 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
@@ -181,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				6AB44BD02C173C22006E5D02 /* BookSummaryInfoView.swift */,
+				6AB44BD22C173F8C006E5D02 /* ButtonsView.swift */,
 			);
 			path = BookInfo;
 			sourceTree = "<group>";
@@ -407,6 +409,7 @@
 				6AD82DE22C169F9200CAC878 /* BookCell.swift in Sources */,
 				6AB44BCC2C172B98006E5D02 /* SearchBooksViewReactor.swift in Sources */,
 				6AF300D02C102BF400AC26F8 /* Endpoint.swift in Sources */,
+				6AB44BD32C173F8C006E5D02 /* ButtonsView.swift in Sources */,
 				6ACD586A2C145E290091EB29 /* NetworkRequestable.swift in Sources */,
 				6AF3009F2C0E112300AC26F8 /* PlayBooks.xcdatamodeld in Sources */,
 				6AD82DEE2C16D15E00CAC878 /* UIImage+Extension.swift in Sources */,
