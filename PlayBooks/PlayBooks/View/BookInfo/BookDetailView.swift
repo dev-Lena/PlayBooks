@@ -20,6 +20,7 @@ final class BookDetailView: UIView {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 12)
         label.textColor = .gray
+        label.numberOfLines = 0
         return label
     }()
     
@@ -44,7 +45,8 @@ final class BookDetailView: UIView {
         addSubview(labelsVStackView)
         
         labelsVStackView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+            make.top.equalToSuperview().offset(10)
+            make.bottom.leading.trailing.equalToSuperview()
         }
     }
     

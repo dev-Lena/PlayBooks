@@ -12,8 +12,6 @@ class BookSummaryInfoView: UIView {
     private lazy var thumbnailImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
-        imageView.layer.cornerRadius = 25
-        imageView.clipsToBounds = true
         return imageView
     }()
     
@@ -21,6 +19,7 @@ class BookSummaryInfoView: UIView {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 18)
         label.textColor = .black
+        label.numberOfLines = 0
         return label
     }()
     
@@ -28,6 +27,7 @@ class BookSummaryInfoView: UIView {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 12)
         label.textColor = .gray
+        label.numberOfLines = 0
         return label
     }()
     
@@ -58,15 +58,17 @@ class BookSummaryInfoView: UIView {
     
     private lazy var labelsVStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [titleLabel, authorLabel, labelsHStackView, spacingView])
+        stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
         return stackView
     }()
     
     private lazy var bookInfoHStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [thumbnailImageView, labelsVStackView])
+        stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .horizontal
-        stackView.distribution = .fill
-        stackView.spacing = 10
+        stackView.distribution = .fillProportionally
+        stackView.alignment = .leading
         return stackView
     }()
     
@@ -84,30 +86,21 @@ class BookSummaryInfoView: UIView {
         addSubview(bookInfoHStackView)
         
         bookInfoHStackView.snp.makeConstraints { make in
-            make.edges.equalToSuperview().inset(20)
+            make.edges.equalToSuperview()
         }
-        
         thumbnailImageView.snp.makeConstraints { make in
-            make.width.equalTo(self.snp.width).multipliedBy(0.3)
+            make.height.equalTo(150)
         }
     }
     
-    func configure(with book: Book?) async {
+    func configure(with book: Book?, thumbnail: UIImage) {
         guard let book = book else { return }
-        titleLabel.text = book.volumeInfo?.title
-        setAuthorLabel(book.volumeInfo?.authors)
-        bookTypeLabel.text = book.volumeInfo?.printType
-        totalPagesLabel.text = " ·  \(book.volumeInfo?.pageCount) 페이지"
-        let imageUrl = book.volumeInfo?.imageUrls?.thumbnail ?? ""
-        await configureImage(imageUrl)
-    }
-    
-    private func configureImage(_ imageURL: String) async {
-        do {
-            let image = try await UIImage().downloadImage(from: imageURL)
-            thumbnailImageView.image = image
-        } catch {
-            thumbnailImageView.image = .defaultImage
+        DispatchQueue.main.async {
+            self.titleLabel.text = book.volumeInfo?.title
+            self.setAuthorLabel(book.volumeInfo?.authors)
+            self.bookTypeLabel.text = book.volumeInfo?.printType
+            self.totalPagesLabel.text = " ·  \(book.volumeInfo?.pageCount) 페이지"
+            self.thumbnailImageView.image = thumbnail
         }
     }
     

@@ -37,8 +37,9 @@ final class RatingView: UIView {
     
     private lazy var ratingHStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [totalRatingsLabel, ratingView])
-        stackView.axis = .vertical
-        stackView.spacing = 3
+        stackView.axis = .horizontal
+        stackView.distribution = .fill
+        stackView.spacing = -0.5
         return stackView
     }()
     
@@ -63,12 +64,14 @@ final class RatingView: UIView {
         addSubview(labelsVStackView)
         
         labelsVStackView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+            make.top.equalToSuperview().offset(10)
+            make.bottom.leading.trailing.equalToSuperview()
         }
     }
     
     func configure(with rating: Int?, counts: Int?) {
-        guard let rating = rating, let counts = counts else { return }
+        let rating = rating ?? 0
+        let counts = counts ?? 0
         ratingView.rating = Double(rating)
         totalRatingsLabel.text = "\(Double(rating))"
         totalRatingCountLabel.text = "Google Play 평점 \(counts)개"

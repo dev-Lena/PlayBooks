@@ -58,7 +58,8 @@ final class PublishInfoView: UIView {
         addSubview(labelsVStackView)
         
         labelsVStackView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+            make.top.equalToSuperview().offset(10)
+            make.bottom.leading.trailing.equalToSuperview()
         }
     }
     

@@ -18,8 +18,12 @@ final class ButtonsView: UIView {
     
     private lazy var buyButton: UIButton = {
         let button = UIButton()
+        button.setTitleColor(.black, for: .normal)
         button.setTitle("구매하기", for: .normal)
-        button.tintColor = .blue
+        button.layer.cornerRadius = 5
+        button.clipsToBounds = true
+        button.layer.borderWidth = 1
+        button.layer.borderColor = UIColor.gray.cgColor
         button.addTarget(self, action: #selector(didBuyButtonTapped), for: .touchUpInside)
         return button
     }()
@@ -27,7 +31,10 @@ final class ButtonsView: UIView {
     private lazy var salesInfoButton: UIButton = {
         let button = UIButton()
         button.setTitle("구매정보", for: .normal)
-        button.tintColor = .white
+        button.tintColor = .blue
+        button.layer.cornerRadius = 5
+        button.clipsToBounds = true
+        button.setTitleColor(.black, for: .normal)
         button.layer.borderWidth = 1
         button.layer.borderColor = UIColor.gray.cgColor
         button.addTarget(self, action: #selector(didsalesInfoButtonTapped), for: .touchUpInside)
@@ -37,7 +44,7 @@ final class ButtonsView: UIView {
     private lazy var buttonsHStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [buyButton, salesInfoButton])
         stackView.axis = .horizontal
-        stackView.distribution = .fill
+        stackView.distribution = .fillEqually
         stackView.spacing = 10
         return stackView
     }()
@@ -55,7 +62,8 @@ final class ButtonsView: UIView {
     private func setupUI() {
         self.addSubview(buttonsHStackView)
         buttonsHStackView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+            make.top.equalToSuperview().offset(10)
+            make.bottom.leading.trailing.equalToSuperview()
         }
     }
     
@@ -66,5 +74,4 @@ final class ButtonsView: UIView {
     @objc private func didsalesInfoButtonTapped() {
         delegate?.didsalesInfoButtonTapped()
     }
-    
 }
