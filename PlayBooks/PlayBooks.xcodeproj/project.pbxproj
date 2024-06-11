@@ -29,6 +29,7 @@
 		6ACD586A2C145E290091EB29 /* NetworkRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACD58692C145E290091EB29 /* NetworkRequestable.swift */; };
 		6AD82DE02C169E7100CAC878 /* Reactive+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD82DDF2C169E7100CAC878 /* Reactive+Extension.swift */; };
 		6AD82DE22C169F9200CAC878 /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD82DE12C169F9200CAC878 /* BookCell.swift */; };
+		6AD82DE82C16A3FE00CAC878 /* BookInfoReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD82DE72C16A3FE00CAC878 /* BookInfoReactor.swift */; };
 		6AD82DEA2C16B96400CAC878 /* SearchBooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD82DE92C16B96400CAC878 /* SearchBooksViewController.swift */; };
 		6AD82DEE2C16D15E00CAC878 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD82DED2C16D15E00CAC878 /* UIImage+Extension.swift */; };
 		6AD82DF02C16D2BC00CAC878 /* ImageError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD82DEF2C16D2BC00CAC878 /* ImageError.swift */; };
@@ -66,6 +67,7 @@
 		6AB44BC72C17072C006E5D02 /* SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
 		6AB44BC92C1712C3006E5D02 /* BookType+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BookType+Extension.swift"; sourceTree = "<group>"; };
 		6AB44BCB2C172B98006E5D02 /* SearchBooksViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBooksViewReactor.swift; sourceTree = "<group>"; };
+		6AB44BCE2C17350E006E5D02 /* BookInfoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookInfoRepository.swift; sourceTree = "<group>"; };
 		6AB44BD02C173C22006E5D02 /* BookSummaryInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSummaryInfoView.swift; sourceTree = "<group>"; };
 		6AB44BD22C173F8C006E5D02 /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
 		6AB44BD42C173FB5006E5D02 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 		6ACD58692C145E290091EB29 /* NetworkRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestable.swift; sourceTree = "<group>"; };
 		6AD82DDF2C169E7100CAC878 /* Reactive+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reactive+Extension.swift"; sourceTree = "<group>"; };
 		6AD82DE12C169F9200CAC878 /* BookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
+		6AD82DE72C16A3FE00CAC878 /* BookInfoReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookInfoReactor.swift; sourceTree = "<group>"; };
 		6AD82DE92C16B96400CAC878 /* SearchBooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBooksViewController.swift; sourceTree = "<group>"; };
 		6AD82DED2C16D15E00CAC878 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		6AD82DEF2C16D2BC00CAC878 /* ImageError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageError.swift; sourceTree = "<group>"; };
@@ -125,6 +128,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6AB44BCD2C1734F1006E5D02 /* BookDetail */ = {
+			isa = PBXGroup;
+			children = (
+				6AB44BCE2C17350E006E5D02 /* BookInfoRepository.swift */,
+			);
+			path = BookDetail;
+			sourceTree = "<group>";
+		};
 		6ACB7CEB2C11AC6200E90E66 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,8 +146,8 @@
 		6ACD585C2C1429360091EB29 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				6AB44BCD2C1734F1006E5D02 /* BookDetail */,
 				6ACD585E2C1429420091EB29 /* SearchBooks */,
-				6ACD585D2C14293C0091EB29 /* BookInfo */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -153,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				6AD82DD72C16996C00CAC878 /* SearchBooks */,
+				6AD82DE62C16A3EA00CAC878 /* BookInfo */,
 			);
 			path = Reactor;
 			sourceTree = "<group>";
@@ -197,6 +209,10 @@
 			path = BookInfo;
 			sourceTree = "<group>";
 		};
+		6AD82DE62C16A3EA00CAC878 /* BookInfo */ = {
+			isa = PBXGroup;
+			children = (
+				6AD82DE72C16A3FE00CAC878 /* BookInfoReactor.swift */,
 			);
 			path = BookInfo;
 			sourceTree = "<group>";
@@ -423,6 +439,7 @@
 				6AD82DF22C16E6E200CAC878 /* SectionHeaderView.swift in Sources */,
 				6AF300E22C1190E000AC26F8 /* URLSession+Extension.swift in Sources */,
 				6AD82DE22C169F9200CAC878 /* BookCell.swift in Sources */,
+				6AD82DE82C16A3FE00CAC878 /* BookInfoReactor.swift in Sources */,
 				6AB44BCC2C172B98006E5D02 /* SearchBooksViewReactor.swift in Sources */,
 				6AF300D02C102BF400AC26F8 /* Endpoint.swift in Sources */,
 				6AB44BD32C173F8C006E5D02 /* ButtonsView.swift in Sources */,
