@@ -89,6 +89,30 @@ class BookInfoViewController: UIViewController, View {
         }
     }
     
+    func bind(reactor: BookInfoReactor) {
+        reactor.state.map { $0.bookId }
+            .distinctUntilChanged()
+            .compactMap { $0 }
+            .observe(on: MainScheduler.asyncInstance)
+            .subscribe(onNext: { [weak self] id in
+                self?.reactor?.action.onNext(.loadBookInfo(id: id))
+            })
+            .disposed(by: disposeBag)
+        
+        reactor.state.map { $0.bookInfo }
+            .distinctUntilChanged()
+            .compactMap { $0 }
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] bookInfo in
+                guard let self = self, let book = bookInfo.volumeInfo else { return }
+                self.bookSummaryInfoView.configure(with: bookInfo, thumbnail: self.thumbnailImage)
+                self.ratingView.configure(with: book.averageRating, counts: book.ratingsCount)
+                self.bookDetailView.configure(with: book.description ?? "")
+                self.publishInfoView.configure(with: book.publishedDate ?? "", publisher: book.publisher ?? "")
+                self.tableView.reloadData()
+            })
+            .disposed(by: disposeBag)
+    }
 }
 
 extension BookInfoViewController: UITableViewDataSource {
