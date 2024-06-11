@@ -39,8 +39,6 @@
 		6AD82DF22C16E6E200CAC878 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD82DF12C16E6E200CAC878 /* SectionHeaderView.swift */; };
 		6AF300952C0E112300AC26F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF300942C0E112300AC26F8 /* AppDelegate.swift */; };
 		6AF300972C0E112300AC26F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF300962C0E112300AC26F8 /* SceneDelegate.swift */; };
-		6AF3009C2C0E112300AC26F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AF3009A2C0E112300AC26F8 /* Main.storyboard */; };
-		6AF3009F2C0E112300AC26F8 /* PlayBooks.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6AF3009D2C0E112300AC26F8 /* PlayBooks.xcdatamodeld */; };
 		6AF300A12C0E112500AC26F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AF300A02C0E112500AC26F8 /* Assets.xcassets */; };
 		6AF300A42C0E112500AC26F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AF300A22C0E112500AC26F8 /* LaunchScreen.storyboard */; };
 		6AF300AF2C0E112600AC26F8 /* PlayBooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF300AE2C0E112600AC26F8 /* PlayBooksTests.swift */; };
@@ -93,8 +91,6 @@
 		6AF300912C0E112300AC26F8 /* PlayBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AF300942C0E112300AC26F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6AF300962C0E112300AC26F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6AF3009B2C0E112300AC26F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		6AF3009E2C0E112300AC26F8 /* PlayBooks.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PlayBooks.xcdatamodel; sourceTree = "<group>"; };
 		6AF300A02C0E112500AC26F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6AF300A32C0E112500AC26F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6AF300A52C0E112500AC26F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -254,11 +250,9 @@
 				6AF300D12C102C1F00AC26F8 /* Networks */,
 				6AF300942C0E112300AC26F8 /* AppDelegate.swift */,
 				6AF300962C0E112300AC26F8 /* SceneDelegate.swift */,
-				6AF3009A2C0E112300AC26F8 /* Main.storyboard */,
 				6AF300A02C0E112500AC26F8 /* Assets.xcassets */,
 				6AF300A22C0E112500AC26F8 /* LaunchScreen.storyboard */,
 				6AF300A52C0E112500AC26F8 /* Info.plist */,
-				6AF3009D2C0E112300AC26F8 /* PlayBooks.xcdatamodeld */,
 			);
 			path = PlayBooks;
 			sourceTree = "<group>";
@@ -417,7 +411,6 @@
 			files = (
 				6AF300A42C0E112500AC26F8 /* LaunchScreen.storyboard in Resources */,
 				6AF300A12C0E112500AC26F8 /* Assets.xcassets in Resources */,
-				6AF3009C2C0E112300AC26F8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,7 +449,6 @@
 				6AB44BD32C173F8C006E5D02 /* ButtonsView.swift in Sources */,
 				6A0048AA2C17B8230012229B /* UIView+Extension.swift in Sources */,
 				6ACD586A2C145E290091EB29 /* NetworkRequestable.swift in Sources */,
-				6AF3009F2C0E112300AC26F8 /* PlayBooks.xcdatamodeld in Sources */,
 				6AD82DEE2C16D15E00CAC878 /* UIImage+Extension.swift in Sources */,
 				6AB44BCF2C17350F006E5D02 /* BookInfoRepository.swift in Sources */,
 				6AF300972C0E112300AC26F8 /* SceneDelegate.swift in Sources */,
@@ -492,14 +484,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6AF3009A2C0E112300AC26F8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6AF3009B2C0E112300AC26F8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		6AF300A22C0E112500AC26F8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -637,7 +621,6 @@
 				INFOPLIST_FILE = PlayBooks/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -665,7 +648,6 @@
 				INFOPLIST_FILE = PlayBooks/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -825,19 +807,6 @@
 			productName = Cosmos;
 		};
 /* End XCSwiftPackageProductDependency section */
-
-/* Begin XCVersionGroup section */
-		6AF3009D2C0E112300AC26F8 /* PlayBooks.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				6AF3009E2C0E112300AC26F8 /* PlayBooks.xcdatamodel */,
-			);
-			currentVersion = 6AF3009E2C0E112300AC26F8 /* PlayBooks.xcdatamodel */;
-			path = PlayBooks.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 6AF300892C0E112300AC26F8 /* Project object */;
 }
