@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6A0048AA2C17B8230012229B /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0048A92C17B8230012229B /* UIView+Extension.swift */; };
 		6A0048AC2C17C4200012229B /* BookInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0048AB2C17C4200012229B /* BookInfoCell.swift */; };
+		6A0048AE2C17D67F0012229B /* SalesInfoHalfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0048AD2C17D67F0012229B /* SalesInfoHalfViewController.swift */; };
 		6A897E002C12EB0C005D3D44 /* MockBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A897DFF2C12EB0C005D3D44 /* MockBook.swift */; };
 		6AB44BC82C17072C006E5D02 /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB44BC72C17072C006E5D02 /* SegmentedControl.swift */; };
 		6AB44BCA2C1712C3006E5D02 /* BookType+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB44BC92C1712C3006E5D02 /* BookType+Extension.swift */; };
@@ -66,6 +67,7 @@
 /* Begin PBXFileReference section */
 		6A0048A92C17B8230012229B /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		6A0048AB2C17C4200012229B /* BookInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookInfoCell.swift; sourceTree = "<group>"; };
+		6A0048AD2C17D67F0012229B /* SalesInfoHalfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesInfoHalfViewController.swift; sourceTree = "<group>"; };
 		6A897DFF2C12EB0C005D3D44 /* MockBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBook.swift; sourceTree = "<group>"; };
 		6AB44BC72C17072C006E5D02 /* SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
 		6AB44BC92C1712C3006E5D02 /* BookType+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BookType+Extension.swift"; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 				6AB44BD62C173FE3006E5D02 /* BookDetailView.swift */,
 				6AB44BD82C173FF9006E5D02 /* PublishInfoView.swift */,
 				6A0048AB2C17C4200012229B /* BookInfoCell.swift */,
+				6A0048AD2C17D67F0012229B /* SalesInfoHalfViewController.swift */,
 			);
 			path = BookInfo;
 			sourceTree = "<group>";
@@ -455,6 +458,7 @@
 				6ACD58602C142A1E0091EB29 /* (null) in Sources */,
 				6AD82DE02C169E7100CAC878 /* Reactive+Extension.swift in Sources */,
 				6ACB7CF32C11B07900E90E66 /* SearchBookRepository.swift in Sources */,
+				6A0048AE2C17D67F0012229B /* SalesInfoHalfViewController.swift in Sources */,
 				6AD82DF02C16D2BC00CAC878 /* ImageError.swift in Sources */,
 				6AB44BD12C173C22006E5D02 /* BookSummaryInfoView.swift in Sources */,
 				6AB44BC82C17072C006E5D02 /* SegmentedControl.swift in Sources */,

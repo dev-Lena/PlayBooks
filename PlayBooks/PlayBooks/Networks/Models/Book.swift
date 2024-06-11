@@ -11,6 +11,7 @@ import Foundation
 struct Book: Codable {
     let id: String
     let volumeInfo: BookInformation?
+    let saleInfo: SaleInfo?
 }
 
 // MARK: - VolumeInfo
@@ -29,6 +30,17 @@ struct BookInformation: Codable {
 struct ImageUrls: Codable {
     let smallThumbnail: String
     let thumbnail: String
+}
+
+// MARK: - SaleInfo
+struct SaleInfo: Codable {
+    let listPrice, retailPrice: SaleInfoListPrice?
+}
+
+// MARK: - SaleInfoListPrice
+struct SaleInfoListPrice: Codable {
+    let amount: Int?
+    let currencyCode: String?
 }
 
 extension Book: Equatable {

@@ -129,6 +129,20 @@ extension BookInfoViewController: ButtonsViewDelegate {
         self.present(alert, animated: true)
         
     }
+    
+    func didsalesInfoButtonTapped() {
+        guard let bookInfo = self.reactor?.currentState.bookInfo else { return }
+        
+        let viewController = SalesInfoHalfViewController(book: bookInfo)
+        viewController.view.backgroundColor = .white
+        viewController.modalPresentationStyle = .pageSheet
+        if let sheet = viewController.sheetPresentationController {
+            sheet.detents = [.medium()]
+            sheet.prefersGrabberVisible = true
+        }
+        self.present(viewController, animated: true)
+    }
+    
     private func presentWebView() {
         guard let infoLink = self.reactor?.currentState.bookInfo?.volumeInfo?.infoLink, let url = URL(string: infoLink) else { return }
         webView = WKWebView()
