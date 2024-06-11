@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A0048AA2C17B8230012229B /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0048A92C17B8230012229B /* UIView+Extension.swift */; };
+		6A0048AC2C17C4200012229B /* BookInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0048AB2C17C4200012229B /* BookInfoCell.swift */; };
 		6A897E002C12EB0C005D3D44 /* MockBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A897DFF2C12EB0C005D3D44 /* MockBook.swift */; };
 		6AB44BC82C17072C006E5D02 /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB44BC72C17072C006E5D02 /* SegmentedControl.swift */; };
 		6AB44BCA2C1712C3006E5D02 /* BookType+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB44BC92C1712C3006E5D02 /* BookType+Extension.swift */; };
@@ -29,6 +31,7 @@
 		6ACD586A2C145E290091EB29 /* NetworkRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACD58692C145E290091EB29 /* NetworkRequestable.swift */; };
 		6AD82DE02C169E7100CAC878 /* Reactive+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD82DDF2C169E7100CAC878 /* Reactive+Extension.swift */; };
 		6AD82DE22C169F9200CAC878 /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD82DE12C169F9200CAC878 /* BookCell.swift */; };
+		6AD82DE42C16A38700CAC878 /* BookInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD82DE32C16A38700CAC878 /* BookInfoViewController.swift */; };
 		6AD82DE82C16A3FE00CAC878 /* BookInfoReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD82DE72C16A3FE00CAC878 /* BookInfoReactor.swift */; };
 		6AD82DEA2C16B96400CAC878 /* SearchBooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD82DE92C16B96400CAC878 /* SearchBooksViewController.swift */; };
 		6AD82DEE2C16D15E00CAC878 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD82DED2C16D15E00CAC878 /* UIImage+Extension.swift */; };
@@ -63,6 +66,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6A0048A92C17B8230012229B /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		6A0048AB2C17C4200012229B /* BookInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookInfoCell.swift; sourceTree = "<group>"; };
 		6A897DFF2C12EB0C005D3D44 /* MockBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBook.swift; sourceTree = "<group>"; };
 		6AB44BC72C17072C006E5D02 /* SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
 		6AB44BC92C1712C3006E5D02 /* BookType+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BookType+Extension.swift"; sourceTree = "<group>"; };
@@ -79,6 +84,7 @@
 		6ACD58692C145E290091EB29 /* NetworkRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestable.swift; sourceTree = "<group>"; };
 		6AD82DDF2C169E7100CAC878 /* Reactive+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reactive+Extension.swift"; sourceTree = "<group>"; };
 		6AD82DE12C169F9200CAC878 /* BookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
+		6AD82DE32C16A38700CAC878 /* BookInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookInfoViewController.swift; sourceTree = "<group>"; };
 		6AD82DE72C16A3FE00CAC878 /* BookInfoReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookInfoReactor.swift; sourceTree = "<group>"; };
 		6AD82DE92C16B96400CAC878 /* SearchBooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBooksViewController.swift; sourceTree = "<group>"; };
 		6AD82DED2C16D15E00CAC878 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
@@ -200,11 +206,13 @@
 		6AD82DE52C16A38E00CAC878 /* BookInfo */ = {
 			isa = PBXGroup;
 			children = (
+				6AD82DE32C16A38700CAC878 /* BookInfoViewController.swift */,
 				6AB44BD02C173C22006E5D02 /* BookSummaryInfoView.swift */,
 				6AB44BD22C173F8C006E5D02 /* ButtonsView.swift */,
 				6AB44BD42C173FB5006E5D02 /* RatingView.swift */,
 				6AB44BD62C173FE3006E5D02 /* BookDetailView.swift */,
 				6AB44BD82C173FF9006E5D02 /* PublishInfoView.swift */,
+				6A0048AB2C17C4200012229B /* BookInfoCell.swift */,
 			);
 			path = BookInfo;
 			sourceTree = "<group>";
@@ -285,6 +293,7 @@
 				6AD82DDF2C169E7100CAC878 /* Reactive+Extension.swift */,
 				6AD82DED2C16D15E00CAC878 /* UIImage+Extension.swift */,
 				6AB44BC92C1712C3006E5D02 /* BookType+Extension.swift */,
+				6A0048A92C17B8230012229B /* UIView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -427,6 +436,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AB44BD72C173FE3006E5D02 /* BookDetailView.swift in Sources */,
+				6AD82DE42C16A38700CAC878 /* BookInfoViewController.swift in Sources */,
 				6AF300D52C102FCC00AC26F8 /* NetworkError.swift in Sources */,
 				6AD82DEA2C16B96400CAC878 /* SearchBooksViewController.swift in Sources */,
 				6AF300DD2C10360E00AC26F8 /* BookList.swift in Sources */,
@@ -440,9 +450,11 @@
 				6AF300E22C1190E000AC26F8 /* URLSession+Extension.swift in Sources */,
 				6AD82DE22C169F9200CAC878 /* BookCell.swift in Sources */,
 				6AD82DE82C16A3FE00CAC878 /* BookInfoReactor.swift in Sources */,
+				6A0048AC2C17C4200012229B /* BookInfoCell.swift in Sources */,
 				6AB44BCC2C172B98006E5D02 /* SearchBooksViewReactor.swift in Sources */,
 				6AF300D02C102BF400AC26F8 /* Endpoint.swift in Sources */,
 				6AB44BD32C173F8C006E5D02 /* ButtonsView.swift in Sources */,
+				6A0048AA2C17B8230012229B /* UIView+Extension.swift in Sources */,
 				6ACD586A2C145E290091EB29 /* NetworkRequestable.swift in Sources */,
 				6AF3009F2C0E112300AC26F8 /* PlayBooks.xcdatamodeld in Sources */,
 				6AD82DEE2C16D15E00CAC878 /* UIImage+Extension.swift in Sources */,
