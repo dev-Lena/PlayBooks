@@ -61,6 +61,7 @@ class BookInfoViewController: UIViewController, View {
     private var bookId: String = ""
     private var thumbnailImage: UIImage = UIImage()
     
+    var webView: WKWebView!
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         setupViews()
@@ -115,6 +116,30 @@ class BookInfoViewController: UIViewController, View {
     }
 }
 
+extension BookInfoViewController: ButtonsViewDelegate {
+    func didBuyButtonTapped() {
+        let alert = UIAlertController(title: "구매 링크로 이동합니다", message: "이동하시겠습니까?", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) {
+            [weak self] _ in
+            self?.presentWebView()
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        alert.addAction(okAction)
+        alert.addAction(cancelAction)
+        self.present(alert, animated: true)
+        
+    }
+    private func presentWebView() {
+        guard let infoLink = self.reactor?.currentState.bookInfo?.volumeInfo?.infoLink, let url = URL(string: infoLink) else { return }
+        webView = WKWebView()
+        webView.navigationDelegate = self
+        view = webView
+        let request = URLRequest(url: url)
+        webView.allowsBackForwardNavigationGestures = true
+        webView.load(request)
+        webView.allowsBackForwardNavigationGestures = true
+    }
+}
 extension BookInfoViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let viewPartCount: Int = 5
@@ -170,3 +195,5 @@ extension BookInfoViewController: UITableViewDelegate {
         return 30
     }
 }
+
+extension BookInfoViewController: WKNavigationDelegate {}
