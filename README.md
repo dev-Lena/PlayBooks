@@ -34,6 +34,9 @@
 | [#12](https://github.com/dev-Lena/kidsnote_pre_project/pull/12#issue-2345326443) |  [#3](https://github.com/dev-Lena/kidsnote_pre_project/issues/3#issue-2331384292), [#5](https://github.com/dev-Lena/kidsnote_pre_project/issues/5#issue-2333328357) | BookInfo--.** <br> 또는 BookDetail--.**, <br> Book.swift |
 
 ## 네트워크
+전체 구조
+
+<img src="https://github.com/dev-Lena/kidsnote_pre_project/assets/52783516/fb821ccf-ac71-452f-8a41-70e1175503c5" width="600" />
 
 0. 네트워크 프로토콜 구현 
     - Unit Test를 가능하게 하고 타입에 좀 더 유연하게 하여 확장성을 열어두기 위해 프로토콜을 이용하여 구현했습니다.
