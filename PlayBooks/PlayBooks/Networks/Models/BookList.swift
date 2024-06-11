@@ -15,44 +15,20 @@ struct BookList: Codable {
 
 // MARK: - Item
 struct Item: Codable {
-    
     let id: String
     let volumeInfo: BookInfo
-}
-
-// MARK: - AccessInfo
-struct AccessInfo: Codable {
-    let country: String
-    let epub, pdf: Epub
-    let webReaderLink: String
-}
-
-// MARK: - Epub
-struct Epub: Codable {
-    let isAvailable: Bool
-}
-
-// MARK: - SaleInfo
-struct SaleInfo: Codable {
-    let country: String
-    let isEbook: Bool
 }
 
 // MARK: - VolumeInfo
 struct BookInfo: Codable {
     let title: String
     let authors: [String]?
-    let publisher, description: String?
-    let publishedDate: String?
-    let pageCount: Int?
     let imageLinks: ImageLinks?
-    let language: String?
-    let infoLink: String?
 }
 
 // MARK: - ImageLinks
 struct ImageLinks: Codable {
-    let smallThumbnail, thumbnail: String
+    let smallThumbnail, thumbnail: String?
 }
 
 extension Item: Equatable {

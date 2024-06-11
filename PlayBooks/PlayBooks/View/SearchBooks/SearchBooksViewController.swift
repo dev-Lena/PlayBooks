@@ -49,9 +49,7 @@ class SearchBooksViewController: UIViewController, View {
     }
     
     private func setupUI() {
-        view.addSubview(searchBar)
-        view.addSubview(segmentedControl)
-        view.addSubview(tableView)
+        view.addSubviews(searchBar, segmentedControl, tableView)
         tableView.delegate = self
         setupConstraints()
     }
@@ -95,13 +93,17 @@ class SearchBooksViewController: UIViewController, View {
             .map(Reactor.Action.selectTab)
             .drive(reactor.action)
             .disposed(by: disposeBag)
-        
-        tableView.rx.modelSelected(Book.self)
-            .asDriver()
-            .drive(onNext: { [weak self] book in
-                // TODO: BookInfoViewController 화면 전환
-//                let bookInfoViewController = BookInfoViewController()
-//                self?.navigationController?.pushViewController(bookInfoViewController, animated: true)
+
+        tableView.rx.itemSelected
+            .observe(on:MainScheduler.asyncInstance)
+            .subscribe(onNext: { [weak self] indexPath in
+                guard let self = self, let book = self.reactor?.currentState.books[indexPath.row] else { return }
+                let imageURL = book.volumeInfo.imageLinks?.thumbnail ?? ""
+                Task {
+                    let thumbnail = try await  UIImage().downloadImage(from: imageURL)
+                    let bookInfoViewController =  BookInfoViewController(id: book.id, thumbnail: thumbnail)
+                    self.navigationController?.pushViewController(bookInfoViewController, animated: true)
+                }
             })
             .disposed(by: disposeBag)
         

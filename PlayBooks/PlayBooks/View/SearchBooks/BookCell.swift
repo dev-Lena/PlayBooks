@@ -105,4 +105,11 @@ final class BookCell: UITableViewCell {
         
         authorLabel.text = authors.joined(separator: ", ")
     }
+    
+    override func prepareForReuse() {
+        self.authorLabel.text = ""
+        self.bookImageView.image = nil
+        self.bookTypeLabel.text = ""
+        self.titleLabel.text = ""
+    }
 }
